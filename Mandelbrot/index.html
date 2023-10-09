@@ -1,1 +1,25 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Множество Мандельброта</h1>
+  <div id="top">
+    <p id="zoom">Приближение: 1.0x</p>
+    <div id="buttons">
+      <button onclick="reset()" >сбросить</button>
+      <button onclick="download()" >скачать</button>
+      <button onclick="toggle()" id="pause">запуск</button>
+      <button onclick="backward()" id="backward">-</button>
+      <button onclick="forward()" id="forward">+</button>
+    </div>
+  </div>
+  <div id="bottom">
+    <canvas id="canvas"></canvas>
+  </div>
+</body>
+</html>
+<script src="config.js"></script>
+<script src="script.js"></script>
