@@ -1,1 +1,25 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Кривая Дракона</h1>
+  <div id="top">
+    <div id="lendiv">
+      <label>Приближение: </label>
+      <input type="range" min="10" max="100" value="20" id="len">
+      <label id="lenp">1.0x</label>
+    </div>
+    <div id="buttons">
+      <button onclick="download()">скачать</button>
+    </div>
+  </div>
+  <div id="bottom">
+    <canvas id="canvas"></canvas>
+  </div>
+</body>
+</html>
+<script src="config.js"></script>
+<script src="script.js"></script>
