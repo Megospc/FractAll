@@ -7,7 +7,8 @@ const pu = document.getElementById('pu');
 
 const url = new URL(location.href);
 
-var interval, draw, frame;
+var interval;
+var draw, frame, forward, backward;
 var pause = true;
 
 var moveX = 0;
@@ -175,13 +176,24 @@ void main() {
   };
   
   frame = function() {
-    draw();
-    
     if (!pause) zoom *= zoomx;
     
     if (zoom > zoomm) zoom = zoomm;
     
+    draw();
+    
     zoomp.innerHTML = "Приближение: "+zoomstr(zoom);
+  };
+  
+  backward = function() {
+    zoom /= zoomx**zoomz;
+    
+    if (zoom < 1) zoom = 1;
+  };
+  forward = function() {
+    zoom *= zoomx**zoomz;
+    
+    if (zoom > zoomm) zoom = zoomm;
   };
   
   canvas.addEventListener("click", e => {
@@ -299,13 +311,24 @@ void main() {
   };
   
   frame = function() {
-    draw();
-    
     if (!pause) zoom *= zoomx;
     
     if (zoom > zoomm) zoom = zoomm;
     
+    draw();
+    
     zoomp.innerHTML = "Приближение: "+zoomstr(zoom);
+  };
+  
+  backward = function() {
+    zoom /= zoomx**zoomz;
+    
+    if (zoom < 1) zoom = 1;
+  };
+  forward = function() {
+    zoom *= zoomx**zoomz;
+    
+    if (zoom > zoomm) zoom = zoomm;
   };
   
   canvas.addEventListener("click", e => {
@@ -343,16 +366,6 @@ function toggle() {
   else pausebtn.innerHTML = "пауза";
 }
 
-function backward() {
-  zoom /= zoomx**zoomz;
-  
-  if (zoom < 1) zoom = 1;
-}
-function forward() {
-  zoom *= zoomx**zoomz;
-  
-  if (zoom > zoomm) zoom = zoomm;
-}
 function tpu() {
   location.href = "?gpu="+pu.checked;
 }
