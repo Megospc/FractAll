@@ -1,0 +1,38 @@
+h1, label, button {
+  font-family: Monospace, Sans-Serif;
+}
+#canvas {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  border: 2px solid #808080;
+}
+#degdiv, #countdiv, #leveldiv {
+  margin-left: 5px;
+}
+#bottom {
+  margin-top: 10px;
+}
+button {
+  margin-left: 5px;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #4676d7;
+  min-width: 100px;
+  font-size: 16px;
+  padding: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #4676d740;
+}
+button:hover {
+  background: #1d49aa;
+}
+#buttons {
+  margin-top: 10px;
+}

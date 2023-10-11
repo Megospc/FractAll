@@ -1,1 +1,35 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Древо Пифагора</h1>
+  <div id="top">
+    <div id="degdiv">
+      <label>Угол: </label>
+      <input type="range" min="0" max="360" value="90" id="deg">
+      <label id="degp">90°</label>
+    </div>
+    <div id="countdiv">
+      <label>Ветви: </label>
+      <input type="range" min="2" max="4" value="2" id="count">
+      <label id="countp">2</label>
+    </div>
+    <div id="leveldiv">
+      <label>Размер: </label>
+      <input type="range" min="2" max="8" value="5" id="level">
+      <label id="levelp">5</label>
+    </div>
+    <div id="buttons">
+      <button onclick="download()">скачать</button>
+    </div>
+  </div>
+  <div id="bottom">
+    <canvas id="canvas"></canvas>
+  </div>
+</body>
+</html>
+<script src="config.js"></script>
+<script src="script.js"></script>
