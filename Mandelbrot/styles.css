@@ -5,11 +5,14 @@
 #top {
   margin-bottom: 5px;
 }
-p, button, h1 {
+p, button, h1, label {
   font-family: Monospace, Sans-Serif;
 }
 p, button {
   display: inline-block;
+}
+input, button {
+  cursor: pointer;
 }
 button {
   margin-left: 5px;
@@ -21,7 +24,6 @@ button {
   min-width: 100px;
   font-size: 16px;
   padding: 3px;
-  cursor: pointer;
   font-size: 16px;
 }
 button:focus {
@@ -41,4 +43,10 @@ button:hover {
 }
 #backward, #forward {
   min-width: 50px;
+}
+#pu {
+  margin-right: 10px;
+}
+#pul {
+  margin-left: 5px;
 }
