@@ -1,1 +1,41 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Множество Жюлиа</h1>
+  <div id="top">
+    <label id="pul">GPU</label>
+    <input type="checkbox" id="pu" onchange="tpu()">
+    <div id="doublediv">
+      <label id="doublel">double</label>
+      <input type="checkbox" id="double" onchange="doublet()">
+    </div>
+    <p id="zoom">Приближение: 1.0x</p>
+    <div id="crdiv">
+      <label>Реальная часть: </label>
+      <input type="range" id="cr" min="-300" max="300" value="0">
+      <label id="crl">0.00</label>
+    </div>
+    <div id="cidiv">
+      <label>Мнимая часть: </label>
+      <input type="range" id="ci" min="-500" max="500" value="0">
+      <label id="cil">0.00</label>
+    </div>
+    <div id="buttons">
+      <button onclick="reset()" >сбросить</button>
+      <button onclick="download()" >скачать</button>
+      <button onclick="toggle()" id="pause">запуск</button>
+      <button onclick="backward()" id="backward">-</button>
+      <button onclick="forward()" id="forward">+</button>
+    </div>
+  </div>
+  <div id="bottom">
+    <canvas id="canvas"></canvas>
+  </div>
+</body>
+</html>
+<script src="double.js"></script>
+<script src="script.js"></script>
