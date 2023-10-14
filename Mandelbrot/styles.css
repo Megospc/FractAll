@@ -44,9 +44,12 @@ button:hover {
 #backward, #forward {
   min-width: 50px;
 }
-#pu {
+#pu, #double {
   margin-right: 10px;
 }
-#pul {
+#pul, #doublel {
   margin-left: 5px;
+}
+#doublediv {
+  display: none;
 }
